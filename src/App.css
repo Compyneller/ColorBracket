@@ -1,39 +1,45 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.customBorder{
+  border-top: 2px solid black;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  
 }
+.customBorder p{
+  font-size: 18px;
+}
+img {
+  image-rendering: auto;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
+  /* Safari seems to support, but seems deprecated and does the same thing as the others. */
+  image-rendering: -webkit-optimize-contrast;
+}
+.MainContainer{
+  position: relative;
+  width: 100%;
+  min-height: 92vh;
+}
+.MainContainer video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  height: 92vh;
+  width: 100%;
+  object-fit: cover;
+}
+.customForm{
+  width: 40%;
+}
+@media screen and (max-width : 900px) {
+  .customForm{
+    width: 100% ;
   }
-}
-
-.App-header {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-}
-
-.App-link {
-  color: rgb(112, 76, 182);
-}
-
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+  
 }
